@@ -1,9 +1,12 @@
 import { Book, ChevronDown, Cloud, LogOut, Phone, Settings } from "lucide-react";
 import { useState } from "react";
 import { House, Code, } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import logo from '../Assets/logo.png';
 
 function Sidebar() {
     const [selectedNavigation, setSelectedNavigation] = useState("Repositories");
+    const navigate = useNavigate();
     const name = "utkarshDairyaPanwar"
     const navigation = [
         { icon: <House />, name: "Repositories" },
@@ -32,7 +35,11 @@ function Sidebar() {
     const bottomNavigationItem = bottomNavigation.map((item, index) => {
         return (
             <div className={`flex flex-row gap-4 items-center text-sm sm:text-base leading-none border cursor-pointer border-gray-200 border-solid p-2 rounded-lg text-gray-600 bg-white`}
-                onClick={() => setSelectedNavigation(item.name)} key={index}>
+                onClick={() => {
+                    if (item.name === "Logout") {
+                        navigate("/");
+                    }
+                }} key={index}>
                 {item.icon}
                 <div>{item.name}</div>
             </div>
@@ -47,7 +54,7 @@ function Sidebar() {
                     <div className="flex gap-3 items-center text-xl sm:text-3xl leading-none">
                         <img
                             loading="lazy"
-                            src="https://cdn.builder.io/api/v1/image/assets/4825dc148fe947419d38ca01a71ae49b/4f1a777898bfe1a24ab57690fa800c32c8189a6475e2d747df6a10c2c69b6a59?apiKey=4825dc148fe947419d38ca01a71ae49b&"
+                            src={logo}
                             alt="CodeAnt AI Logo"
                             className="object-contain w-3 sm:w-9"
                         />

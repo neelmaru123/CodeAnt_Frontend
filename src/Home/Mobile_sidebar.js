@@ -1,6 +1,7 @@
 import { Book, ChevronDown, Cloud, LogOut, Phone, Settings, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { House, Code } from "lucide-react";
+import logo from '../Assets/logo.png';
 
 function MobileSidebar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -40,7 +41,7 @@ function MobileSidebar() {
                 <div className="flex items-center gap-3">
                     <img
                         loading="lazy"
-                        src="https://cdn.builder.io/api/v1/image/assets/4825dc148fe947419d38ca01a71ae49b/4f1a777898bfe1a24ab57690fa800c32c8189a6475e2d747df6a10c2c69b6a59?apiKey=4825dc148fe947419d38ca01a71ae49b&"
+                        src={logo}
                         alt="CodeAnt AI Logo"
                         className="object-contain w-8"
                     />
@@ -68,7 +69,7 @@ function MobileSidebar() {
                                 <div className="flex items-center gap-3">
                                     <img
                                         loading="lazy"
-                                        src="https://cdn.builder.io/api/v1/image/assets/4825dc148fe947419d38ca01a71ae49b/4f1a777898bfe1a24ab57690fa800c32c8189a6475e2d747df6a10c2c69b6a59?apiKey=4825dc148fe947419d38ca01a71ae49b&"
+                                        src={logo}
                                         alt="CodeAnt AI Logo"
                                         className="object-contain w-8"
                                     />

@@ -23,25 +23,21 @@ function Signin() {
             icon: GitHub,
             provider: "Github",
             altText: "Github logo",
-            onClick: () => console.log("Sign in with Github clicked"),
         },
         {
             icon: Bitbucket,
             provider: "Bitbucket",
             altText: "Bitbucket logo",
-            onClick: () => console.log("Sign in with Bitbucket clicked"),
         },
         {
             icon: Azure,
             provider: "Azure Devops",
             altText: "Azure Devops logo",
-            onClick: () => console.log("Sign in with Azure Devops clicked"),
         },
         {
             icon: GitLab,
             provider: "GitLab",
             altText: "GitLab logo",
-            onClick: () => console.log("Sign in with GitLab clicked"),
         },
     ];
 
