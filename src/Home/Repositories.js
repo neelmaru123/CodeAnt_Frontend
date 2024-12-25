@@ -82,7 +82,6 @@ function Input({ placeholder }) {
     );
 }
 
-
 function Repositories() {
     return (
         <>
@@ -145,7 +144,6 @@ function Repositories() {
                     </div>
                 </div>
             </div>
-
         </>
     )
 }
