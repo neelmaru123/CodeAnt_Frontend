@@ -19,6 +19,20 @@ function MobileSidebar() {
         { icon: <LogOut />, name: "Logout" },
     ];
 
+    const navigatingItems = navigation.map((item, index) => (
+        <div className={`flex flex-row gap-4 items-center text-base leading-none cursor-pointer font-bold text-gray-600 bg-white`} key={index}>
+            {item.icon}
+            <div>{item.name}</div>
+        </div>
+    ))
+
+    const bottomNavigationItems = bottomNavigation.map((item, index) => (
+        <div className={`flex flex-row gap-4 items-center text-sm sm:text-base leading-none cursor-pointer font-bold text-gray-600 bg-white`} key={index}>
+            {item.icon}
+            <div>{item.name}</div>
+        </div>
+    ))
+
     return (
         <>
             {/* Top Navigation Bar for Mobile */}
@@ -70,22 +84,12 @@ function MobileSidebar() {
                             </div>
                             {/* Navigation Items */}
                             <div className="flex flex-col gap-4">
-                                {navigation.map((item, index) => (
-                                    <div className={`flex flex-row gap-4 items-center text-base leading-none cursor-pointer font-bold text-gray-600 bg-white`} key={index}>
-                                        {item.icon}
-                                        <div>{item.name}</div>
-                                    </div>
-                                ))}
+                                {navigatingItems}
                             </div>
 
                             {/* Bottom Navigation */}
                             <div className="flex flex-col gap-4">
-                                {bottomNavigation.map((item, index) => (
-                                    <div className={`flex flex-row gap-4 items-center text-sm sm:text-base leading-none cursor-pointer font-bold text-gray-600 bg-white`} key={index}>
-                                        {item.icon}
-                                        <div>{item.name}</div>
-                                    </div>
-                                ))}
+                                {bottomNavigationItems}
                             </div>
                         </div>
                     </div>

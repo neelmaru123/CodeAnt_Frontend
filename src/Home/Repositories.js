@@ -69,20 +69,18 @@ function Button({ variant, size, children, icon: Icon }) {
     );
 }
 
-function Input({ placeholder, className }) {
+function Input({ placeholder }) {
     return (
         <div className="relative w-80 max-w-4xl">
             <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 w-5 h-5" />
             <input
                 type="text"
                 placeholder={placeholder}
-                className={`w-full border border-gray-300 rounded-lg pl-10 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 ${className}`}
+                className={`w-full border border-gray-300 rounded-lg pl-10 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 `}
             />
         </div>
     );
 }
-
-
 
 
 function Repositories() {
